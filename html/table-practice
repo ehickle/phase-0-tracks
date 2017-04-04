@@ -21,5 +21,21 @@
   		<td>Cinnamon Rolls</td>
   	</tr>
   </table>
+<p> This text serves no purpose except providing spacing between two tables</p>
+  <table border =1>
+    <tr>
+      <th>Example 1</th>
+      <th>Example 2</th>
+      <th>Example 3</th>
+    </tr>
+    <tr>
+      <td rowspan="2">I'm out of ideas for content of these cells</td>
+      <td colspan="2">Data</td>
+    </tr>
+    <tr>
+      <td>Even Better Data</td>
+      <td>Cheese</td>
+    </tr>
+  </table>
   </body>
 </html>
