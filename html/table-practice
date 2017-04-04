@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Evan Hickle Table Practice</title>
+  </head>
+  <body>
+  <table border =1>
+  	<tr>
+  		<th>Foods</th>
+  		<th>Drinks</th>
+  		<th>Desserts</th>
+  	</tr>
+  	<tr>
+  		<td>Pizza</td>
+  		<td>Soda</td>
+  		<td>Ice cream</td>
+  	</tr>
+  	<tr>
+  		<td>Hot Dogs</td>
+  		<td>Water</td>
+  		<td>Cinnamon Rolls</td>
+  	</tr>
+  </table>
+  </body>
+</html>
