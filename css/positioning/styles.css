@@ -1,0 +1,22 @@
+p {
+	color:red;
+}
+#oct{
+	display:block;
+	width:210px;
+	margin: 0px auto;
+	margin-top:85px;
+}
+
+#hat{
+	position: absolute;
+	left:232px;
+	top:2px;
+}
+
+#glasses{
+	position: absolute;
+	left: 288px;
+	top:183px;
+
+}
