@@ -1,11 +1,11 @@
 body {
-  width:960px;
+  max-width:960px;
 }
 
 main {
 /*float:right;*/
 display:inline-block;
-width:756px;
+width:75%;
 vertical-align:top;
 }
 
@@ -24,9 +24,10 @@ cite {
   display:inline-block;
   /*float:left;*/
   height: auto;
-  width:200px;
+  width:20%;
+  min-width:160px;
   list-style-type: none;
-  padding-left: 0px;
+  padding-right: 0px;
   vertical-align:top;
 }
 
@@ -45,4 +46,22 @@ figure {
 figcaption {
   font-style: italic;
   text-align: right;
+}
+
+/*@media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}*/
+
+@media screen and (max-width: 250px) {
+  #external-links{
+    font-size:.34em;
+  }
+}
+
+@media screen and (min-width: 725px) {
+  cite {
+    float:right;
+  }
 }
