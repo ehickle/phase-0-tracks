@@ -1,0 +1,40 @@
+body {
+	background-color:goldenrod;
+	font-size:2em;
+	font-family:Helvetica, sans-serif;
+}
+
+main {
+	float:left;	
+	width:400px;
+}
+
+nav {
+float:left;
+}
+
+ul {
+	list-style-type:upper-armenian;
+}
+
+th {
+	text-decoration: underline;
+}
+
+.odd{
+	background: beige;
+}
+.q5 {
+	border:solid;
+	padding:2px;
+	margin-left: 3px;
+	font-style: italic;
+}
+
+.header{
+	letter-spacing: 15px;
+}
+
+.header:hover {
+	color:red;
+}
