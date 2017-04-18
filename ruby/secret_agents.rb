@@ -7,8 +7,8 @@
 
 
 
-puts "Enter word to be encrypted"
-word =gets.chomp
+def encrypt(str1)
+word =str1
 word.downcase!
 count =0
 while count < word.length
@@ -20,6 +20,9 @@ while count < word.length
 	count+=1
 end
 puts word
+end
+
+encrypt("red blue")
 #Decrypt
 	#Ask user for input to be decrypted
 	#determine length of string
