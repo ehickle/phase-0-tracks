@@ -37,7 +37,7 @@ insurance=gets.chomp
 	end
 
 
-#Section 2, use logic to determine if employee is a vampire
+#Section 3, use logic to determine if employee is a vampire
 # vampireStatus ="Results inconclusive"
 if age == ageCheck && (likesGarlic==true || immortal==false)
 	vampireStatus ="Probably not a vampire"
@@ -51,6 +51,16 @@ else
 end
 if name =="Drake Cula" || name == "Tu Fang"
 	vampireStatus ="Definitely a Vampire"
+end
+allergy=nil;
+
+until allergy == "sunshine" || allergy == "done"
+	puts "Please list any allergies one at a time. When finished, type 'done'"
+	allergy=gets.chomp
+end
+if allergy == "sunshine"
+	vampireStatus="Probably a Vampire"
+elsif allergy == "done"
 end
 
 puts vampireStatus
