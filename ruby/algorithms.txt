@@ -1,0 +1,27 @@
+
+1. Release 0, how to use elevator
+Desired Floor equals user input
+
+-Read current floor, number is above door.
+    -If desired floor is greater than current floor, press up button
+    -If desired floor is less than current floor, press down button
+        -If current floor equals desired floor, do nothing
+
+-While door is closed, do nothing.
+-When door opens, step into elevator.
+-Scan bottom left button, if number equals desired floor, press button
+    -If unequal, move to right one button. 
+    -If desired button not found by end of row, move up one row, and scan left to right.
+    -Repeat until button number equals desired floor, and press that button.
+
+-While elevator is moving, do nothing.
+-When elevator stops, step out of elevator.
+
+
+2. Release 1, Traffic Light
+    -Look at light, determine current color
+        -If red, stop
+        -if green, keep going
+        -if yellow
+            -Look for cops. If there are no cops, go!
+            -If there is a cop, stop!
