@@ -18,38 +18,31 @@ bread=gets.chomp
 	likesGarlic = true
 	elsif bread == "no"
 	likesGarlic= false
-
+	end
 puts "Would you like to enroll in the company's health insurance? (yes/no)"
 insurance=gets.chomp
 	if insurance =="yes"
 	immortal =false
-	elsif
+	elsif insurance =="no"
 	immortal =true
 	else
 	end
 
 
 #Section 2, use logic to determine if employee is a vampire
-
-if age=ageCheck && (likesGarlic=true || immortal=false)
+# vampireStatus ="Results inconclusive"
+if age == ageCheck && (likesGarlic==true || immortal==false)
 	vampireStatus ="Probably not a vampire"
-else
-vampireStatus ="Results Inconclusive"
 end
-if age != ageCheck && (likesGarlic=false || immortal=true)
+if age != ageCheck && (likesGarlic ==false || immortal ==true)
 	vampireStatus ="Probably a Vampire"
-else
-vampireStatus ="Results Inconclusive"
 end
-if age != ageCheck && likesGarlic=false && immortal=true
+if age != ageCheck && likesGarlic ==false && immortal ==true
 	vampireStatus ="Almost definitely a Vampire"
 else
-vampireStatus ="Results Inconclusive"
 end
 if name =="Drake Cula" || name == "Tu Fang"
-	vampireStatus="Definitely a Vampire"
-else
-vampireStatus ="Results Inconclusive"
+	vampireStatus ="Definitely a Vampire"
 end
 
 puts vampireStatus
