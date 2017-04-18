@@ -1,6 +1,14 @@
 #This program will gather basic data from new prospective werewolf employees
 #It will also screen for vampire imposters!
 
+#Section 1, determine number of applicants
+puts "How many employees will be processed?"
+emp= gets.chomp
+emp=emp.to_i
+
+#Section 2, Gathers info
+count =0
+until count == emp
 puts "What is your name?"
 name =gets.chomp
 
@@ -46,3 +54,5 @@ if name =="Drake Cula" || name == "Tu Fang"
 end
 
 puts vampireStatus
+count =count+1
+end
