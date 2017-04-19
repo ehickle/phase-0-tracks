@@ -12,7 +12,9 @@ word =str1
 word.downcase!
 count =0
 while count < word.length
-	if word[count] == " "	
+	if word[count] == " "
+	elsif word[count] =="z"
+		word[count] = "a"
 	else
 	word[count] =word[count].next
 	end
@@ -21,7 +23,8 @@ end
 puts word
 end
 
-encrypt("red blue")
+encrypt("abc")
+encrypt("zed")
 
 #Decrypt
 	#Ask user for input to be decrypted
@@ -43,5 +46,6 @@ def decrypt(str2)
 	end
 	puts word
 end
-decrypt("ebe b")
+decrypt("bcd")
+decrypt("afe")
 
