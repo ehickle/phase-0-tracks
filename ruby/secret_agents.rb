@@ -23,8 +23,8 @@ end
 puts word
 end
 
-encrypt("abc")
-encrypt("zed")
+# encrypt("abc") #Test code
+# encrypt("zed") #Test code
 
 #Decrypt
 	#Ask user for input to be decrypted
@@ -46,6 +46,21 @@ def decrypt(str2)
 	end
 	puts word
 end
-decrypt("bcd")
-decrypt("afe")
+# decrypt("bcd") #Test code
+# decrypt("afe")
+#decrypt(encrypt("swordfish"))  #Example of using a method inside a method
+
+#Make code interactive
+
+puts "Would you like to encrypt or decrypt a password? (encrypt/decrypt)"
+ans=gets.chomp
+puts "What is the word to be encrypted or decrypted?"
+word1=gets.chomp
+if ans == "encrypt"
+	encrypt(word1)
+elsif ans == "decrypt"
+	decrypt(word1)
+else
+	print "Error, invalid answer to question 1"
+end
 
