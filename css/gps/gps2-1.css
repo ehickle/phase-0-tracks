@@ -1,3 +1,44 @@
-body {
-	background-color: goldenrod;
+
+header {
+	display:block;
+  background-color: gray;
+  font-size: 1.2em;
+	width:100%;
+	margin:auto;
+	text-align:center;
 }
+
+h1 {
+  color: blue;
+}
+
+section {
+  border: solid green;
+  height: 80%;
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+.column-1 {
+	display: inline-block;
+  /* border: solid green; */
+  width:45%;
+ 
+	}
+
+.column-2 {
+	display: inline-block;
+  /* border:dotted; */
+  width:45%;
+  vertical-align: top;
+  padding-bottom: 93px;
+}
+
+footer {
+	display:block;
+	width:100%;
+	margin: auto;
+	text-align:center;
+	}
