@@ -9,8 +9,9 @@
 #Combine letters back into two words
 #Switch word order
 
-name = "Felicia Torres"
- name2=name.downcase!.split('')
+
+	name = "Evan Hickle"
+ name2 =name.downcase!.split('')
 vowels= "aeioua" #Second a used for edge case of letter u. This is allowed
 	#because the index command will only return the value of the first instance of
 	#a ltter. Thus using a twice has no affect
@@ -35,5 +36,6 @@ name2 =name2.rotate
 name2 =name2.join(' ')
 p name2
 
+ 
 
 
