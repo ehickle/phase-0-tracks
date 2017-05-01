@@ -9,8 +9,10 @@
 #Combine letters back into two words
 #Switch word order
 
-
-	name = "Evan Hickle"
+puts "Enter the name to encode"
+name = nil
+until name == "quit"
+	name = gets.chomp
  name2 =name.downcase!.split('')
 vowels= "aeioua" #Second a used for edge case of letter u. This is allowed
 	#because the index command will only return the value of the first instance of
@@ -35,7 +37,9 @@ name2 = name2.split(' ')
 name2 =name2.rotate
 name2 =name2.join(' ')
 p name2
+puts "Enter another name, or 'quit'"
 
+end
  
 
 
