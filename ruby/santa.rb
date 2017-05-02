@@ -1,11 +1,11 @@
 class Santa
-	attr_reader: :age, :ethnicity
-	attr_accessor: : :gender
-	def initialize(gender, ethnicity)
+	attr_reader :age, :ethnicity
+	attr_accessor :gender
+	def initialize(gender, ethnicity,age)
 		@gender= gender
 		@ethnicity = ethnicity
 		@reindeer_ranking = ["Rudolph","Dasher","Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
-		@age = 0
+		@age = age
 		puts "Initializing Santa instance..."
 
 	end
@@ -19,7 +19,7 @@ class Santa
 	end
 
 	def show_data
-		puts "#{@gender}, #{@ethnicity}, #{@reindeer_ranking}, #{@age} "
+		puts "Santa info #{@gender}, #{@ethnicity}, #{@reindeer_ranking}, #{@age} "
 	end
 
 
@@ -33,21 +33,27 @@ class Santa
 		@age = @age+1
 	end
 
-	def gender=(new_gender)
-		@gender = new_gender
-	end
 end
+santas = []
+ example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 
- first = Santa.new("Agender", "colombian")
- second = Santa.new("Male", "Haitian")
- third = Santa.new("Female", "Black")
+
+50.times do |i|
+	santas << Santa.new(example_genders.sample, example_ethnicities.sample, rand(140))
+end
  # first.speak    ----- test code to ensure methods are functional
  # second.eat_milk_and_cookies("chocolate chip")
- first.show_data     #testcode displaying attributes
- first.age
- first.ethnicity
- first.celebrate_birthday
- first.gender = "Transgender"
+ 
+ santas[0].age
+ santas[0].ethnicity
+ santas[0].celebrate_birthday
+ santas[0].gender = "Transgender"
+ i=0
+ for i in 0..49
+ 	santas[i].show_data
+  i+=1
+ end
 
- first.show_data
+
 
