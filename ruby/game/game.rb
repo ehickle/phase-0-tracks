@@ -9,7 +9,7 @@
 		#Win/Lose method
 class Game
 	def initialize
-		puts "let's play hangman!"
+		p "let's play hangman!"
 		@letters_guessed =[]
 		@guesses = 0
 	end
