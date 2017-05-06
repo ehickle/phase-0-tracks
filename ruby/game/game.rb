@@ -15,8 +15,11 @@ class Game
 	end
 
 	def get_codeword(codeword)
-		@blank = ["-"]*codeword.length
-		@codeword = codeword.split('')
+		@codeword = codeword.split('')	
+	end
+
+	def set_blank
+		@blank = ["-"]*@codeword.length
 		p @blank
 	end
 
@@ -30,14 +33,18 @@ class Game
 			indices.each do |x|
 			@blank[x] = letter
 				end
-			puts "Nice Guess!"
-			print @blank
 			else 
-			puts "Try again!"
-			print @blank
 			end
-			@guesses = @guesses+1
-		puts "You've used #{@guesses} out of #{@allowed_guesses} guesses!"
+	end
+
+	def user_feedback(letter)
+		if @codeword.include?(letter)
+		puts "Nice Guess!"
+			print @blank
+		else
+		puts "Try again!"
+			print @blank
+		end
 	end
 
 	def store_guesses(letter)
@@ -46,7 +53,7 @@ class Game
 
 	def check_duplicates(letter)
 		if @letters_guessed.include?(letter)
-			puts "You already guessed that letter!"
+			p "You already guessed that letter!"
 			duplicates =true
 		else
 			duplicates = false
@@ -64,31 +71,35 @@ end
 
 
 Game1 = Game.new
-puts "Player 1, input codeword"
+p "Player 1, input codeword"
 codeword = gets.chomp
 codeword =codeword.downcase
 Game1.get_codeword(codeword)
+Game1.set_blank
 allowed_guesses=Game1.number_guesses(codeword)
 guesses =0
 winner = false
+
 until guesses >= allowed_guesses || winner == true
-puts "Player, 2, guess a letter"
+p "Player, 2, guess a letter"
 letter = gets.chomp
 letter=letter.downcase
 duplicate = Game1.check_duplicates(letter)
 Game1.store_guesses(letter)
  	if !duplicate
  	Game1.letter_compare(letter)
+ 	Game1.user_feedback(letter)
 	guesses = guesses+1
 	else
 	end
 	winner = Game1.did_win
+	p "You've used #{guesses} out of #{allowed_guesses} guesses"
 end
 
 if winner == true
-	puts "Congratulations! You win!"
+	p "Congratulations! You win!"
 else 
-	puts "You lost! You suck!"
+	p "You lost! You suck!"
 end
-puts "The codeword was #{codeword}"
+p "The codeword was #{codeword}"
 
