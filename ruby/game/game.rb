@@ -19,7 +19,7 @@ class Game
 	end
 
 	def set_blank
-		@blank = ["-"]*codeword.length
+		@blank = ["-"]*@codeword.length
 		p @blank
 	end
 
@@ -33,12 +33,18 @@ class Game
 			indices.each do |x|
 			@blank[x] = letter
 				end
-			puts "Nice Guess!"
-			print @blank
 			else 
-			puts "Try again!"
-			print @blank
 			end
+	end
+
+	def user_feedback(letter)
+		if @codeword.include?(letter)
+		puts "Nice Guess!"
+			print @blank
+		else
+		puts "Try again!"
+			print @blank
+		end
 	end
 
 	def store_guesses(letter)
@@ -82,11 +88,12 @@ duplicate = Game1.check_duplicates(letter)
 Game1.store_guesses(letter)
  	if !duplicate
  	Game1.letter_compare(letter)
+ 	Game1.user_feedback(letter)
 	guesses = guesses+1
 	else
 	end
 	winner = Game1.did_win
-	p "You've used #{guesses} out of #{allowed_guesses}"
+	p "You've used #{guesses} out of #{allowed_guesses} guesses"
 end
 
 if winner == true
