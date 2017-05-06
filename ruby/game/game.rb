@@ -15,8 +15,11 @@ class Game
 	end
 
 	def get_codeword(codeword)
+		@codeword = codeword.split('')	
+	end
+
+	def set_blank
 		@blank = ["-"]*codeword.length
-		@codeword = codeword.split('')
 		p @blank
 	end
 
@@ -36,8 +39,6 @@ class Game
 			puts "Try again!"
 			print @blank
 			end
-			@guesses = @guesses+1
-		puts "You've used #{@guesses} out of #{@allowed_guesses} guesses!"
 	end
 
 	def store_guesses(letter)
@@ -46,7 +47,7 @@ class Game
 
 	def check_duplicates(letter)
 		if @letters_guessed.include?(letter)
-			puts "You already guessed that letter!"
+			p "You already guessed that letter!"
 			duplicates =true
 		else
 			duplicates = false
@@ -64,15 +65,17 @@ end
 
 
 Game1 = Game.new
-puts "Player 1, input codeword"
+p "Player 1, input codeword"
 codeword = gets.chomp
 codeword =codeword.downcase
 Game1.get_codeword(codeword)
+Game1.set_blank
 allowed_guesses=Game1.number_guesses(codeword)
 guesses =0
 winner = false
+
 until guesses >= allowed_guesses || winner == true
-puts "Player, 2, guess a letter"
+p "Player, 2, guess a letter"
 letter = gets.chomp
 letter=letter.downcase
 duplicate = Game1.check_duplicates(letter)
@@ -83,12 +86,13 @@ Game1.store_guesses(letter)
 	else
 	end
 	winner = Game1.did_win
+	p "You've used #{guesses} out of #{allowed_guesses}"
 end
 
 if winner == true
-	puts "Congratulations! You win!"
+	p "Congratulations! You win!"
 else 
-	puts "You lost! You suck!"
+	p "You lost! You suck!"
 end
-puts "The codeword was #{codeword}"
+p "The codeword was #{codeword}"
 
