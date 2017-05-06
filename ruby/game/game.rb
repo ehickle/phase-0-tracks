@@ -12,6 +12,7 @@ class Game
 	attr_accessor :allowed_guesses
 
 	def initialize
+		puts "let's play hangman!"
 		@letters_guessed =[]
 		@guesses = 0
 		@duplicate
@@ -55,19 +56,28 @@ class Game
 		end
 	end
 
+	def did_win
+		if @blank.include?("-")
+			did_win = false
+		else 
+			did_win = true
+		end
+	end
 end
 
 
 Game1 = Game.new
 puts "Player 1, input codeword"
 codeword = gets.chomp
+codeword =codeword.downcase
 Game1.get_codeword(codeword)
 allowed_guesses=Game1.number_guesses(codeword)
 guesses =0
-
-while guesses < allowed_guesses
+winner = false
+until guesses >= allowed_guesses || winner == true
 puts "Player, 2, guess a letter"
 letter = gets.chomp
+letter=letter.downcase
 duplicate = Game1.check_duplicates(letter)
 Game1.store_guesses(letter)
  	if !duplicate
@@ -75,13 +85,13 @@ Game1.store_guesses(letter)
 	guesses = guesses+1
 	else
 	end
+	winner = Game1.did_win
 end
 
-# if did_win == true
-# 	puts "Congratulations! You win!"
-# else 
-# 	puts "You lost! You suck!"
-# end
-
-
+if winner == true
+	puts "Congratulations! You win!"
+else 
+	puts "You lost! You suck!"
+end
+puts "The codeword was #{codeword}"
 
