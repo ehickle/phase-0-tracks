@@ -8,14 +8,10 @@
 		#method to display which letters have been correctly guessed
 		#Win/Lose method
 class Game
-	attr_accessor :guesses
-	attr_accessor :allowed_guesses
-
 	def initialize
 		puts "let's play hangman!"
 		@letters_guessed =[]
 		@guesses = 0
-		@duplicate
 	end
 
 	def get_codeword(codeword)
@@ -38,6 +34,7 @@ class Game
 			print @blank
 			else 
 			puts "Try again!"
+			print @blank
 			end
 			@guesses = @guesses+1
 		puts "You've used #{@guesses} out of #{@allowed_guesses} guesses!"
