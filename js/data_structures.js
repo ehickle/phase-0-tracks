@@ -14,3 +14,14 @@ name_colors[horse_names[i]] = colors[i]
 }
 
 console.log(name_colors)
+
+function Car(make, model, year) {
+	this.make = make;
+	this.model =model;
+	this.year = year;
+	this.honk = function() {console.log("Beep Beep!")}
+}
+
+Car1 = new Car("Honda", "Civic", 2007)
+console.log(Car1)
+Car1.honk()
