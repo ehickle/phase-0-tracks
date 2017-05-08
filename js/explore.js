@@ -7,7 +7,12 @@
 function reverse(string) {
 	var word = string
 	letters = word.split('')
-	return letters
+	n = letters.length
+	letters_reversed = []
+	for (i=0; i<n; i++) {
+	letters_reversed[i] = letters[(n-i)-1]
+	}
+return letters_reversed
 }
 
 console.log(reverse("hello"))
