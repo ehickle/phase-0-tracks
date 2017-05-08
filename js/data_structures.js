@@ -25,3 +25,7 @@ function Car(make, model, year) {
 Car1 = new Car("Honda", "Civic", 2007)
 console.log(Car1)
 Car1.honk()
+
+Car2 = new Car("Chevy", "Cruze", 2012)
+console.log(Car2)
+Car2.honk()
