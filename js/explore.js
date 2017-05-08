@@ -12,7 +12,14 @@ function reverse(string) {
 	for (i=0; i<n; i++) {
 	letters_reversed[i] = letters[(n-i)-1]
 	}
-return letters_reversed
+	word = letters_reversed.join('')
+	return word
+
 }
 
-console.log(reverse("hello"))
+answer =reverse("JavaScript")
+
+if  (1+2 ==3) {
+console.log(answer)
+} else	{
+}
