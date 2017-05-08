@@ -11,11 +11,11 @@
 function longest_string(word_array) {
 	num_words = word_array.length
 	word_lengths =[]
-	console.log(word_array)
-	// for (i=0; i=num_words;i++)	{
-	// 	word_lengths[i] = (words[i]).length
-	// }
-	// return word_lengths
+
+	for (i=0; i<num_words;i++)	{
+		word_lengths.push(word_array[i].length)
+	}
+	console.log(word_lengths)
 }
 
 
