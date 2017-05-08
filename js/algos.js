@@ -10,9 +10,8 @@
 
 function longest_string(word_array) {
 	num_words = word_array.length
-	console.log(num_words)
-	// words = word_array
-	// word_lengths =[]
+	word_lengths =[]
+	console.log(word_array)
 	// for (i=0; i=num_words;i++)	{
 	// 	word_lengths[i] = (words[i]).length
 	// }
