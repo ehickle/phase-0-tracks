@@ -18,13 +18,15 @@ function longest_string(word_array) {
 	}
 
 	for (i=0; i<num_words; i++) {
-		if (word_lengths[i] < word_lengths[i+1]) {
+		if (word_lengths[i] < longest.length) {
 			longest = word_array[i+1]
+		}
 
-		} else if (word_lengths[i] = word_lengths[(i+1)]) {
+		} else if (word_lengths[i] =  longest.length) {
 			longest = word_array[i] +" and " +word_array[i+1]
+		}
 
-		} else if (word_lengths[i] > word_lengths[i+1]) {
+		} else if (word_lengths[i] > longest.length) {
 			longest = word_array[i]
 		}
 		
@@ -34,7 +36,10 @@ function longest_string(word_array) {
 
 
 answer = longest_string(["Taco", "Tacos", "Tacozz"])
+answer2 = longest_string["Joseph", "bob", "only", "hickle"]
 console.log(answer)
+console.log(answer2)
+
 
 
 
