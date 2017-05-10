@@ -9,20 +9,20 @@
 	// Return variable "longest"
 
 function longest_string(word_array) {
-	num_words = word_array.length
-	word_lengths =[]
+	var num_words = word_array.length
+	var word_lengths =[]
 	for (i=0; i<num_words;i++)	{
 		word_lengths.push(word_array[i].length)
 	}
 
-	longest = Math.max(...word_lengths)	
-	index = word_lengths.indexOf(longest)
-	longest_word = word_array[index]
+	var longest = Math.max(...word_lengths)	
+	var index = word_lengths.indexOf(longest)
+	var longest_word = word_array[index]
 	return longest_word
 }
 
-answer = longest_string(["Tacozz", "Tacos", "taco", "burrito"])
-answer2 = longest_string(["joseph", "bob", "only", "hbbbb", "bbb"])
+var answer = longest_string(["Tacozz", "Tacos", "taco", "burrito"])
+var answer2 = longest_string(["joseph", "bob", "only", "hbbbb", "bbb"])
 console.log(answer)
 console.log(answer2)
 
@@ -39,12 +39,16 @@ console.log(answer2)
 	// 	-function returns true
 	// -if not, funtion returns false
 
-function share_pair(object) {
-	object1= object[i]
-	return object1
+function share_pair(object1, object2) {
+	var keys1 = []
+	var values1 =[]
+	var keys1 =object1.
+		for (key in object1) 
+			console.log(key)
+		
 }
 
-result = share_pair({name: "Steven", age: 54}, {name: "Tamir", age: 54});
+var result = share_pair({name: "Steven", age: 54}, {name: "Tamir", age: 54});
 console.log(result)
 
 
