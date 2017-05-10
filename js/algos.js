@@ -42,13 +42,23 @@ console.log(answer2)
 function share_pair(object1, object2) {
 	var keys1 = []
 	var values1 =[]
-	var keys1 =object1.
-		for (key in object1) 
-			console.log(key)
+	
 		
 }
 
 var result = share_pair({name: "Steven", age: 54}, {name: "Tamir", age: 54});
 console.log(result)
 
+
+// Release 2
+
+function random_data(integer) {
+	letters = "abcdefghijklmnopqrstuvwxyz"
+	for (i=0; i<=integer; i++) {
+	rand_length= Math.round((Math.random())*10+1);
+	}
+	console.log(rand_length)
+}
+
+random_data(3)
 
