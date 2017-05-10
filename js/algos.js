@@ -55,22 +55,23 @@ console.log(result)
 function random_data(integer) {
 	letters = "abcdefghijklmnopqrstuvwxyz"
 	letters = letters.split('')
-	word =[]
 	random = []
+	full_word= []
+	word =[]
 
-	for (i=0; i<=integer; i++) {
+	for (i=0; i <= integer; i++) {
 	rand_length= Math.round((Math.random())*10+1); //random number to determine length of string
-	
-		for (i=0; i<= rand_length; i++) {
+			for (x=0; x <=rand_length; x++) {
+
 			rand_letter=letters[Math.round((Math.random()*25))] //random number to determine which letter to use
-			word.push(rand_letter)
+			word[x] = (rand_letter)
 		}
-	word = word.join('')
-	random.push(word)
+	full_word =word.join('')
+	random.push(full_word)
 	}
 	return random
 }
 
 test_data = random_data(3)
-console.log(test_data)
+	console.log(test_data)
 
