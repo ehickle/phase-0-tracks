@@ -54,10 +54,20 @@ console.log(result)
 
 function random_data(integer) {
 	letters = "abcdefghijklmnopqrstuvwxyz"
+	letters = letters.split('')
+	word =[]
+	random = []
+
 	for (i=0; i<=integer; i++) {
-	rand_length= Math.round((Math.random())*10+1);
+	rand_length= Math.round((Math.random())*10+1); //random number to determine length of string
 	}
-	console.log(rand_length)
+		for (i=0; i<= rand_length; i++){
+			rand_letter=letters[Math.round((Math.random()*26)+1)] //random number to determine which letter to use
+			word << rand_letter
+			word.join('')
+		}
+	random << word
+return random
 }
 
 random_data(3)
