@@ -61,10 +61,11 @@ function random_data(integer) {
 	for (i=0; i<=integer; i++) {
 	rand_length= Math.round((Math.random())*10+1); //random number to determine length of string
 	}
-		for (i=0; i<= rand_length; i++){
-			rand_letter=letters[Math.round((Math.random()*26)+1)] //random number to determine which letter to use
-			word << rand_letter
+		for (i=0; i<= rand_length; i++) {
+			rand_letter=letters[Math.round((Math.random()*25))] //random number to determine which letter to use
+			word.push(rand_letter)
 			word.join('')
+			console.log(word)
 		}
 	random << word
 return random
