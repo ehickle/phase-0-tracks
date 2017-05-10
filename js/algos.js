@@ -39,6 +39,12 @@ console.log(answer2)
 	// 	-function returns true
 	// -if not, funtion returns false
 
-	function share_pair(object)
+function share_pair(object) {
+	object1= object[i]
+	return object1
+}
+
+result = share_pair({name: "Steven", age: 54}, {name: "Tamir", age: 54});
+console.log(result)
 
 
