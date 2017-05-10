@@ -19,12 +19,10 @@ function longest_string(word_array) {
 
 	for (i=0; i<num_words; i++) {
 		if (word_lengths[i] < longest.length) {
-			longest = word_array[i+1]
-		}
 
-		} else if (word_lengths[i] =  longest.length) {
-			longest = word_array[i] +" and " +word_array[i+1]
-		}
+
+		} else if (word_lengths[i] =  longest.length && word_array[i] != longest) {
+			longest = word_array[i] +" and " +longest
 
 		} else if (word_lengths[i] > longest.length) {
 			longest = word_array[i]
