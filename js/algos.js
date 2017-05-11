@@ -72,6 +72,6 @@ function random_data(integer) {
 	return random
 }
 
-test_data = random_data(3)
-	console.log(test_data)
+test_data = random_data(5)
+
 
