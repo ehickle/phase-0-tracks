@@ -47,7 +47,6 @@ function share_pair(object1, object2) {
 }
 
 var result = share_pair({name: "Steven", age: 54}, {name: "Tamir", age: 54});
-console.log(result)
 
 
 // Release 2
@@ -59,8 +58,8 @@ function random_data(integer) {
 	full_word= []
 	word =[]
 
-	for (i=0; i <= integer; i++) {
-	rand_length= Math.round((Math.random())*10+1); //random number to determine length of string
+	for (i=1; i <= integer; i++) {
+	rand_length= Math.round((Math.random())*9+1); //random number to determine length of string
 			for (x=0; x <=rand_length; x++) {
 
 			rand_letter=letters[Math.round((Math.random()*25))] //random number to determine which letter to use
@@ -72,6 +71,13 @@ function random_data(integer) {
 	return random
 }
 
-test_data = random_data(5)
+test_data = []
+for (n=0; n<10; n++) {
+	test_data[n] = random_data(3)
+	console.log(test_data[n])
+	test_longest =longest_string(test_data[n])
+	console.log("The longest word in array " + n + " is " + test_longest)
+}
+
 
 
