@@ -41,9 +41,23 @@ console.log(answer2)
 
 function share_pair(object1, object2) {
 	var keys1 = []
-	var values1 =[]
-	
-		
+		values1 =[]
+	 	keys2 =[]
+	 	values2 = []
+
+	for (key in object1) {
+   		keys1.push(key);
+   		values1.push(object1[key]);
+	}	
+	for (key in object2) {
+   		keys2.push(key);
+   		values2.push(object2[key]);
+	}
+
+	for (i=0; i<keys1.length; i++)
+		contains = keys2.indexOf(keys1[i])
+	console.log(contains)
+
 }
 
 var result = share_pair({name: "Steven", age: 54}, {name: "Tamir", age: 54});
