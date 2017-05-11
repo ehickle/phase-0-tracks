@@ -49,19 +49,16 @@ function share_pair(object1, object2) {
    		keys1.push(key);
    		values1.push(object1[key]);
 	}	
+	
 	for (key in object2) {
    		keys2.push(key);
    		values2.push(object2[key]);
 	}
 
-	for (i=0; i<keys1.length; i++)
-		contains = keys2.indexOf(keys1[i])
-	console.log(contains)
-
 }
 
 var result = share_pair({name: "Steven", age: 54}, {name: "Tamir", age: 54});
-
+console.log(result)
 
 // Release 2
 
@@ -85,13 +82,13 @@ function random_data(integer) {
 	return random
 }
 
-test_data = []
-for (n=0; n<10; n++) {
-	test_data[n] = random_data(3)
-	console.log(test_data[n])
-	test_longest =longest_string(test_data[n])
-	console.log("The longest word in array " + n + " is " + test_longest)
-}
+// test_data = []
+// for (n=0; n<10; n++) {
+// 	test_data[n] = random_data(3)
+// 	console.log(test_data[n])
+// 	test_longest =longest_string(test_data[n])
+// 	console.log("The longest word in array " + n + " is " + test_longest)
+// }
 
 
 
