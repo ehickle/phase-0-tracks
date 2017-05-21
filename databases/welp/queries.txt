@@ -1,0 +1,24 @@
+1) Join three tables
+
+SELECT * FROM reviews, businesses, users WHERE reviews.business_id = businesses.id;
+
+|3|there's just soup!|6|1|6|Sushi World|1|Bradford Pitt
+|3|there's just soup!|6|1|6|Sushi World|2|Mandy Kaling
+|3|there's just soup!|6|1|6|Sushi World|3|Angela Jolie
+|3|there's just soup!|6|1|6|Sushi World|4|Steven Wonder
+|3|there's just soup!|6|1|6|Sushi World|5|Holly Berry
+|3|there's just soup!|6|1|6|Sushi World|6|Meryl Streepman
+|3|there's just soup!|6|1|6|Sushi World|7|Denzel George
+|1|It's a trap!|5|2|5|Plumbing by Janet|1|Bradford Pitt
+|1|It's a trap!|5|2|5|Plumbing by Janet|2|Mandy Kaling
+|1|It's a trap!|5|2|5|Plumbing by Janet|3|Angela Jolie
+|1|It's a trap!|5|2|5|Plumbing by Janet|4|Steven Wonder
+|1|It's a trap!|5|2|5|Plumbing by Janet|5|Holly Berry
+|1|It's a trap!|5|2|5|Plumbing by Janet|6|Meryl Streepman
+|1|It's a trap!|5|2|5|Plumbing by Janet|7|Denzel George
+
+
+2)
+SELECT reviews.stars, reviews.comment, businesses.name, users.name FROM reviews JOIN businesses, users ON reviews.business_id = businesses.id;
+
+3)
