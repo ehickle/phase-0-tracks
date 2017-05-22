@@ -32,10 +32,10 @@ SQL
 
 bets.execute(create_table_cmd);
 
-#Retrieve user input
+#Retrieve user input, store name in table
 p "What is your name?"
 name= gets.chomp
-bets.execute("INSERT INTO picks (bettors_name) VALUES (#{name})")
+bets.execute("INSERT INTO picks (bettors_name) VALUES ('#{name}')")
 
 selected = bets.execute("SELECT * FROM picks")
 p selected
