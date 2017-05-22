@@ -5,6 +5,10 @@
 
 require 'sqlite3'
 
+#Create database
+bets = SQLite3::Database.new("picks.db")
+bets.results_as_hash = true
+
 #Retrieve user input
 p "What is your name?"
 name= gets.chomp
