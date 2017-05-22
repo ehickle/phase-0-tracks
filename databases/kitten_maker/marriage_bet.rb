@@ -37,13 +37,24 @@ p "What is your name?"
 name= gets.chomp
 bets.execute("INSERT INTO picks (bettors_name) VALUES ('#{name}')")
 
-selected = bets.execute("SELECT * FROM picks")
-p selected
 
-array = []
+#Retrieve Users picks, store them in database
+
 i =0
-# while i <12
-# 	puts "Who is your number #{i+1} pick?"
-# 	array[i] = gets.chomp
-# 	i = i+1
-# end
+array = []
+while i <12
+	puts "Who is your number #{i+1} pick?"
+	array[i] = gets.chomp
+	i = i+1
+end
+
+
+bets.execute("INSERT INTO picks (pick1, pick2, pick3, pick4, pick5, 
+ pick6, pick7, pick8, pick9, pick10, pick11, pick12) VALUES ('#{array[0]}',
+ '#{array[1]}','#{array[2]}', '#{array[3]}', '#{array[4]}', '#{array[5]}', 
+ '#{array[6]}', '#{array[7]}','#{array[8]}','#{array[9]}','#{array[10]}',
+ '#{array[11]}')")
+
+#test code to print data
+# selected = bets.execute("SELECT * FROM picks")
+# p selected
