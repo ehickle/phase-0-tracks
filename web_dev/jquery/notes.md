@@ -1,0 +1,2 @@
+I believe the most effective way for me to learn some jQuery quickly is to go straight tot the source. jQuery's website has a learning center which outlines the basics of the library, along with basic API documentation. Rather than jumping around to find specific commands, I will familiarize myself with the language. Then I will research individual commands as needed as I put together the project.
+
