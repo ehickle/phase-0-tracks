@@ -36,7 +36,6 @@ get '/:person_1/loves/:person_2' do
 end
 
 get '/:number1/add/:number2' do
-  p params
   answer = params[:number1].to_i + params[:number2].to_i
   "The answer is #{answer}"
 end
@@ -44,21 +43,25 @@ end
 # write a GET route that retrieves
 # all student data
 get '/students' do
-  students = db.execute("SELECT * FROM students")
-  response = ""
-  students.each do |student|
-    response << "ID: #{student['id']}<br>"
-    response << "Name: #{student['name']}<br>"
-    response << "Age: #{student['age']}<br>"
-    response << "Campus: #{student['campus']}<br><br>"
+    students = db.execute("SELECT * FROM students")
+    response = ""
+      students.each do |student|
+        response << "ID: #{student['id']}<br>"
+        response << "Name: #{student['name']}<br>"
+        response << "Age: #{student['age']}<br>"
+        response << "Campus: #{student['campus']}<br><br>"
   end
   response
 end
 
+get '/students/:name' do
+  student_name = params[:name]
+  if student_name
+    selected = db.execute("SELECT * FROM students WHERE name=?", student_name)
+    selected.to_s
+  else 
+    "There is no student by this name!"
+  end
+end
 # write a GET route that retrieves
 # a particular student
-
-get '/students/:id' do
-  student = db.execute("SELECT * FROM students WHERE id=?", [params[:id]])[0]
-  student.to_s
-end
