@@ -16,6 +16,14 @@ get '/contact' do
   "828 S Bishop St, Chicago, IL 60607"
 end
 
+get '/great_job/' do
+  name1 = params[:name]
+  if name1
+    "Great job, #{name1}!"
+  else
+    "Great job!"
+  end
+end
 # write a GET route with
 # route parameters
 get '/about/:person' do
